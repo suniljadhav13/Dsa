@@ -7,6 +7,7 @@ Transpose of a matrix
 Find the sum of diagonal elements
 */
 
+import java.util.Arrays;
 
 public class J9_Dsa_multiquestion4 {
     public static void main(String[] args) {
@@ -52,15 +53,29 @@ public class J9_Dsa_multiquestion4 {
         int a [][]={{24,534,645,756},{432,34,645,7560}};
         int b [][]={{432,43,243,53},{232,5343,564,765}};
 
-        int sub[][]=new  int[2][4];
+        /*int sub[][]=new  int[2][4];
 
-        for (int i = 0; i < a.length-1; i++) {
-            for (int j = 0; j < b.length-1; j++) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length-1; j++) {
                 sub[i][j]=a[i][j]-b[i][j];
             }
         }
         for (int i = 0; i < sub.length; i++) {
-            System.out.println(sub[i]);
+            System.out.print(Arrays.toString(sub[i])+", ");
+        }*/
+
+        //Matrix multiplication
+        int [][]multi = new int[2][4];
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                multi[i][j]=a[i][j]*b[i][j];
+            }
+        }
+
+        for(int i=0; i<multi.length; i++)
+        {
+            System.out.println(Arrays.toString(multi [i])+", ");
         }
     }
 }
